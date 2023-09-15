@@ -142,7 +142,7 @@ function run () {
 	var skinIndex = 0;
 	for (var skinName in skins) {
 		if (!skins.hasOwnProperty(skinName)) continue;
-		json += '\t"' + skinName + '":{\n';
+		// json += '\t"' + skinName + '":{\n';
 
 		var skinLayers = skins[skinName];
 		var skinLayersCount = skinLayers.length;
@@ -212,7 +212,7 @@ function run () {
 			skinLayerIndex++;
 			json += skinLayerIndex < skinLayersCount ? ",\n" : "\n";
 		}
-		json += "\t\}";
+		// json += "\t\}";
 
 		skinIndex++;
 		json += skinIndex < skinsCount ? ",\n" : "\n";
