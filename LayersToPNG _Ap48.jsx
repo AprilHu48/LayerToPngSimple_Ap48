@@ -12,7 +12,7 @@ var groupsAsSkins = false;
 var useRulerOrigin = false;
 var imagesDir = "./images/";
 var projectDir = "";
-var padding = 1;
+var padding = 0;
 
 // IDs for saving settings.
 const settingsID = stringIDToTypeID("settings");
@@ -227,6 +227,7 @@ function run () {
 		name = name.substring(0, name.indexOf("."));
 		var file = new File(absProjectDir + name + ".json");
 		file.remove();
+		file.encoding="UTF8";
 		file.open("w", "TEXT");
 		file.lineFeed = "\n";
 		file.write(json);
